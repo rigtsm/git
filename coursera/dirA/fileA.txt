@@ -1,2 +1,3 @@
 feature 1
 Now lets change the file for some commits
+Other lines ready for the file
