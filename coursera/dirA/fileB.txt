@@ -1,3 +1,0 @@
-adding lines for the first FF merge
-second lines for the first FF merge
-adding line for another commit on master
