@@ -1,4 +1,0 @@
-feature 1
-Now lets change the file for some commits
-Other lines ready for the file
-More and more lines before commit
