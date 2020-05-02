@@ -1,3 +1,7 @@
+- **Each commit contains a snapshot of the previous project**
+- **Git can calculate the difference between commits**
+	- this is known as a diff or a patch
+
 git log --oneline --graph --all
 git checkout
 
@@ -70,15 +74,63 @@ git checkout -b <branch_name> [SHA-1 YOU COPIED]
 - -u track this branch (--set-upstream)
 
 
+**Rebase**: rewriting commit history
+- **so not rewrite history that has been shared with others**
+- normal rebase
+- interactive rebase
+
+**Rebase moves commits to a new parent (base)**
+- after the rebase no need for a **merge commit**
+- a FF commit can be applied
+
+![rebase](coursera/img/rebase.png)
+
+- **Each commit contains a snapshot of the previous project**
+- **Git can calculate the difference between commits**
+	- this is known as a diff or a patch
+
+Rebasing Pros and Cons:
+- Pros
+	- we can incorporate changes from the parent branch
+		- we can use the new features/bugfixes
+		- test are on more current code
+		- it makes the eventual merge into a master ff
+	- avoids **unnecessary** commits
+		- it allows us to shape/define clean commits histories
+- Cons:
+	- merge conflicts may need to be resolved
+	- il can cause problems if our commits have been shared because it changes the commit id
+	- not preserving the commit history, we are rewriting the commit history
+
+Change the parent of the currently checked branch to <upstream>
+	git rebase <upstream>
+
+"Upstream" usually refers the parent branch of the rebase branch
+
+Checkout <branch> and changes its parent <upstream>
+	
+	git checkout <branch>
+	git rebase master
+
+	# equivalent
+	git rebase master <branch>
 
 
+Fixing a merge conflict while rebasing:
+
+	git checkout featureX
+	git rebase master
+	--conflict on fileA
+	git status
+	-- fix conflict
+	git add fileA.txt
+	git rebase --continue
 
 
+We want to rebase the feature branch to the master branch.
+![rebase](coursera/img/rebase.png)
 
-
-
-
-
+	git rebase master
 
 
 
