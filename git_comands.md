@@ -58,7 +58,13 @@ git checkout -b <branch_name> [SHA-1 YOU COPIED]
 	- retrieves new objects an references from another repo without merging it with the actual work 
 	- not merged with the local work
 
-
+**Pull**: combines **git fetch** and **git merge**
+- if objects are fetched, the tracking branch is merge into the current branch ( like a topic branch merging into a base branch)
+- merging options
+	- --ff fast forward if possible, else merge commit
+	- --no-ff always include a merge commit
+	- --ff-only cancel il doing a merge commit
+	- --rebase conserve-merges
 
 
 
