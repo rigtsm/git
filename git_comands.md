@@ -66,7 +66,8 @@ git checkout -b <branch_name> [SHA-1 YOU COPIED]
 	- --ff-only cancel il doing a merge commit
 	- --rebase conserve-merges
 
-
+**Push**: adding commits to the remote repository 
+- -u track this branch (--set-upstream)
 
 
 
