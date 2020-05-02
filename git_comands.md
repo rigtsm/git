@@ -48,6 +48,16 @@ git checkout -b <branch_name> [SHA-1 YOU COPIED]
 - can become out of synch with local branches
 - updated with network commands like, clone, fetch, pull and push
 
+## Network commands
+- **Clone**: copies a remote repository
+- **Fetch**: retrieves new objects and references from the remote
+- **Pull**: fetches and merges commits locally
+- **Push**: adds new objects and references to the remote repository
+
+**Fetch**: git fetch <repo>
+	- retrieves new objects an references from another repo without merging it with the actual work 
+	- not merged with the local work
+
 
 
 
